@@ -39,7 +39,7 @@ textarea {
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #ddd;
 }
 
 .past {
@@ -70,6 +70,11 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+.currentDay {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 /* .hour {
   background-color: #000000;
 } */

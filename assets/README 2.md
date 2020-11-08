@@ -36,15 +36,16 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+![A user clicks on slots on the color-coded calendar and edits the events.](./assets/05-third-party-apis-homework-demo.gif)
 
 ## Review
 
 You are required to submit the following for review:
 
-* The URL of the deployed application
+- The URL of the deployed application
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+- The URL of the GitHub repository, with a unique name and a README describing the project
 
-- - -
+---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

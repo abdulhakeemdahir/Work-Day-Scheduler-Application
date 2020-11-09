@@ -21,18 +21,23 @@ for (var i = 0; i < 9; i++) {
   }
 }
 
-// Set up Local Storage
+// Setting up the save button
 var saveButton = $(".btn");
 saveButton.on("click", function (event) {
   event.preventDefault();
-  var textBlock = $(formEl).val();
-  localStorage.setItem("textBlock", textBlock);
+  // Store a jQuery reference to the specific clicked button.
+  var clickedButton = $(this);
+  var hour = $(clickedButton).siblings("div").data("hour"); // This line will need to traverse from the button to the sibling div.hour and get the value of `data-hour`.
+  var hourText = $(clickedButton).siblings("textarea").val(); // This line will need to traverse from the button to the sibling <textarea> and get the value.
+  // Use the `hour` to build a dynamic storage key to save the `hourText`
+  localStorage.setItem("hour-" + hour, hourText);
 });
-for (var i = 0; i < 9; i++) {
-var textEl = localStorage.getItem("textBlock");
-$(formEl).text(textEl);
+function getText() {
+  for (var i = 9; i < 17; i++) {
+    textInput = $("#hour-input-" + i);
+    var textEl = localStorage.getItem("hour-" + i, "hourText");
+    textInput.text(textEl);
+  }
 }
-// console.log(textEl);
-// console.log(formEl[i]);
-console.log(currentHour);
-console.log(stateData);
+
+getText();

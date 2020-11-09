@@ -40,8 +40,8 @@ function getText() {
   }
 }
 
+// Setting up the Clear functionality
 clearButton = $("#clear-button");
-
 clearButton.on("click", function (event) {
   event.preventDefault();
   localStorage.clear();

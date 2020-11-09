@@ -13,11 +13,11 @@ var stateHour = $(".hour");
 for (var i = 0; i < 9; i++) {
   var stateData = $(stateHour[i]).attr("data-hour");
   if (stateData < currentHour) {
-    $(formEl[i]).css("background-color", "#d3d3d3");
+    $(formEl[i]).addClass("past");
   } else if (stateData == currentHour) {
-    $(formEl[i]).css("background-color", "#ff6961");
+    $(formEl[i]).addClass("present");
   } else if (stateData > currentHour) {
-    $(formEl[i]).css("background-color", "#77dd77");
+    $(formEl[i]).addClass("future");
   }
 }
 

@@ -5,13 +5,22 @@ var currentDate = $("#currentDate").text(
 );
 var currentDay = $(".currentDay").text(today.format("dddd"));
 
-var currentHour = today.format("k");
+var currentHour = parseInt(today.format("k"));
 
 // Setting up conditionals with Data Attributes
-var state = $(".hour");
-var stateData = $(state.getAttribute("data-hour"));
+var formEl = $(".form-control");
+var stateHour = $(".hour");
+var stateData = stateHour.attr("data-hour");
 if (stateData < currentHour) {
-    $(state.setAttribute("class", ".past"));
+  formEl.css("background-color", "#d3d3d3");
 }
-state.attr("class","present");
-console.log(state);
+else if (stateData = currentHour) {
+  formEl.css("background-color", "#ff6961");
+}
+
+else if (stateData > currentHour) {
+  formEl.css("background-color", "#77dd77");
+}
+
+console.log(currentHour);
+console.log(stateData);

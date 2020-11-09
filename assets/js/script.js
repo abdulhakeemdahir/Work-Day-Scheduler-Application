@@ -11,7 +11,7 @@ var currentHour = parseInt(today.format("k"));
 var formEl = $(".form-control");
 var stateHour = $(".hour");
 for (var i = 0; i < 9; i++) {
-    var stateData = $(stateHour[i]).attr("data-hour");
+  var stateData = $(stateHour[i]).attr("data-hour");
   if (stateData < currentHour) {
     $(formEl[i]).css("background-color", "#d3d3d3");
   } else if (stateData == currentHour) {
@@ -20,6 +20,19 @@ for (var i = 0; i < 9; i++) {
     $(formEl[i]).css("background-color", "#77dd77");
   }
 }
-console.log(formEl[i]);
+
+// Set up Local Storage
+var saveButton = $(".btn");
+saveButton.on("click", function (event) {
+  event.preventDefault();
+  var textBlock = $(formEl).val();
+  localStorage.setItem("textBlock", textBlock);
+});
+for (var i = 0; i < 9; i++) {
+var textEl = localStorage.getItem("textBlock");
+$(formEl).text(textEl);
+}
+// console.log(textEl);
+// console.log(formEl[i]);
 console.log(currentHour);
 console.log(stateData);

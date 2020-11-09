@@ -40,4 +40,11 @@ function getText() {
   }
 }
 
+clearButton = $("#clear-button");
+
+clearButton.on("click", function (event) {
+  event.preventDefault();
+  localStorage.clear();
+  window.location.reload();
+});
 getText();

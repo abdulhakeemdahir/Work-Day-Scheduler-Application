@@ -33,7 +33,7 @@ saveButton.on("click", function (event) {
   localStorage.setItem("hour-" + hour, hourText);
 });
 function getText() {
-  for (var i = 9; i < 17; i++) {
+  for (var i = 9; i < 18; i++) {
     textInput = $("#hour-input-" + i);
     var textEl = localStorage.getItem("hour-" + i, "hourText");
     textInput.text(textEl);
